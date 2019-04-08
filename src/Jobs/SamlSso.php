@@ -56,7 +56,7 @@ class SamlSso implements SamlContract
         $this->destination = config(sprintf(
             'samlidp.sp.%s.destination',
             $this->getServiceProvider($this->authn_request)
-        )) . '?idp=' . config('app.url');
+        ));// . '?idp=' . config('app.url');
 
         return $this->response();
     }
